@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SwiftApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +20,58 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello, World!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hV6-Nm-Wen">
+                                <rect key="frame" x="111" y="317.5" width="153" height="33.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bbD-yb-oDP">
+                                <rect key="frame" x="153" y="428" width="69" height="30"/>
+                                <state key="normal" title="Life sucks"/>
+                                <connections>
+                                    <action selector="lifeSucksPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GSg-Sg-X70"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Atj-gV-ehg">
+                                <rect key="frame" x="148" y="485" width="80" height="30"/>
+                                <state key="normal" title="Life is good"/>
+                                <connections>
+                                    <action selector="lifeIsGoodPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XJt-Cb-pBm"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Por-0L-4Th">
+                                <rect key="frame" x="136" y="139" width="42" height="21"/>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N5T-GH-JCi">
+                                <rect key="frame" x="104" y="139" width="167" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Por-0L-4Th" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0RC-rb-aRl"/>
+                            <constraint firstItem="N5T-GH-JCi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Bdz-bk-iMi"/>
+                            <constraint firstItem="hV6-Nm-Wen" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="PG0-Jb-oxF"/>
+                            <constraint firstItem="bbD-yb-oDP" firstAttribute="top" secondItem="hV6-Nm-Wen" secondAttribute="bottom" constant="96" id="VIZ-BS-cWY"/>
+                            <constraint firstItem="hV6-Nm-Wen" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YC2-Gg-di3"/>
+                            <constraint firstItem="Atj-gV-ehg" firstAttribute="top" secondItem="bbD-yb-oDP" secondAttribute="bottom" constant="8" id="b1S-6a-OKL"/>
+                            <constraint firstItem="bbD-yb-oDP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ftH-mK-XBG"/>
+                            <constraint firstItem="Atj-gV-ehg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kcc-Pu-0TJ"/>
+                            <constraint firstItem="N5T-GH-JCi" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="120" id="pOs-hh-Jhd"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="greetingLabel" destination="hV6-Nm-Wen" id="nC1-nb-BFy"/>
+                        <outlet property="todaysDate" destination="N5T-GH-JCi" id="OZH-qN-627"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-79.200000000000003" y="137.18140929535232"/>
         </scene>
     </scenes>
 </document>
