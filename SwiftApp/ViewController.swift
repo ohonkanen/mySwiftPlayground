@@ -3,7 +3,7 @@
 //  SwiftApp
 //
 //  Created by Ossi Honkanen on 24/04/17.
-//  Copyright © 2017 Ossi Honkanen. All rights reserved.
+//  Copyright © 2017 Ossi Honkanen. All rights reserved...
 //
 
 import UIKit
@@ -32,7 +32,7 @@ class ViewController: UIViewController {
         if birthYear < 2000 {
             print("You're born on the right side of the Millennium")
         }   else {
-            print("2K GOGO!")
+            print("Y2K GOGO!")
         }
         
         todaysDate.text = "17.2.2022"
